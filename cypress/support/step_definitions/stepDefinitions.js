@@ -20,11 +20,17 @@ Then("we click the button with the Dynamic ID with success", function () {
     .click();
 });
 
+Given("we click the button with {string} in ID attribute", function (string) {
+  cy.get("#" + string)
+    .should("have.id", string)
+    .click();
+});
+
 Given(
-  "we click the button with {string} in {string} attribute",
-  function (string, string2) {
-    cy.get("#" + string)
-      .should("have.id", string)
-      .click();
+  "we click the button with {string} in Class attribute",
+  function (string) {
+    cy.get("." + string)
+    .should("have.class", string)
+    .click();
   }
 );
