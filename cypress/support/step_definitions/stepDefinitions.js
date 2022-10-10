@@ -30,7 +30,15 @@ Given(
   "we click the button with {string} in Class attribute",
   function (string) {
     cy.get("." + string)
-    .should("have.class", string)
-    .click();
+      .should("have.class", string)
+      .click();
   }
 );
+
+Given("we press the button triggering the AJAX Request", function () {
+  cy.get("#ajaxButton").contains("Button Triggering AJAX").click();
+});
+
+Given("we wait until seeing the text {string}", function (string) {
+  cy.get('.bg-success', { timeout: 20000 }).should('be.visible');
+});
