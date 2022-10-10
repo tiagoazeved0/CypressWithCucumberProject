@@ -40,5 +40,15 @@ Given("we press the button triggering the AJAX Request", function () {
 });
 
 Given("we wait until seeing the text {string}", function (string) {
-  cy.get('.bg-success', { timeout: 20000 }).should('be.visible');
+  cy.get(".bg-success", { timeout: 20000 }).should("be.visible");
+  cy.get(".bg-success").should("have.text", string);
 });
+
+Given(
+  "we wait until the end of the load spinner and click the button",
+  function () {
+    cy.get('button.btn.btn-primary')
+      .should("have.text", "Button Appearing After Delay")
+      .click();
+  }
+);

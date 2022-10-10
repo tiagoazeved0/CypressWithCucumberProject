@@ -6,7 +6,7 @@ Feature: UI Testing Playground - Feature 5 - AJAX Data
         Given that I open the browser with the url <url>
         When we press the UI Playground Option <option>
         And we press the button triggering the AJAX Request
-        Then we wait until seeing the text "Data loaded with AJAX get request"
+        Then we wait until seeing the text "Data loaded with AJAX get request."
 
 
         Examples:
