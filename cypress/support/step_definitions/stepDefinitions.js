@@ -47,8 +47,12 @@ Given("we wait until seeing the text {string}", function (string) {
 Given(
   "we wait until the end of the load spinner and click the button",
   function () {
-    cy.get('button.btn.btn-primary')
+    cy.get("button.btn.btn-primary")
       .should("have.text", "Button Appearing After Delay")
       .click();
   }
 );
+
+Given("we press the button triggering the Client Side Logic", function () {
+  cy.get("#ajaxButton").contains("Button Triggering Client Side Logic").click();
+  });
