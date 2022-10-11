@@ -56,3 +56,9 @@ Given(
 Given("we press the button triggering the Client Side Logic", function () {
   cy.get("#ajaxButton").contains("Button Triggering Client Side Logic").click();
   });
+
+  Given("we click the button that ignores the DOM Event", function () {
+    
+    cy.get("button#badButton").should("have.class", 'btn btn-primary').click();
+    cy.get("button#badButton").should("have.class", 'btn btn-success');
+    });
