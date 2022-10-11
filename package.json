@@ -5,6 +5,6 @@
     "cypress": "latest"
   },
     "scripts": {
-    "build": "npm run build"
+    "build": "npm install"
 }
 }
