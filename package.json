@@ -3,5 +3,8 @@
     "@badeball/cypress-cucumber-preprocessor": "latest",
     "@bahmutov/cypress-esbuild-preprocessor": "latest",
     "cypress": "latest"
-  }
+  },
+    "scripts": {
+    "build": "npm run build"
+}
 }
