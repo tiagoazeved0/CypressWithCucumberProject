@@ -6,12 +6,12 @@ const {
 
 Given("that I open the browser with the url {string}", function (string) {
   cy.visit(string);
-  cy.get("h1").contains("UI Test Automation");
+  cy.get("h1").contains("UI Test");
 });
 
 When("we press the UI Playground Option {string}", function (string) {
-  cy.get("a:contains('" + string + "')").click();
-  cy.get("h3").contains(string);
+  cy.get("a:contains('" + string + "')").should("have.text", string).click();
+  cy.get("h3").should("have.text", string);
 });
 
 Then("we click the button with the Dynamic ID with success", function () {
